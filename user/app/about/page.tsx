@@ -18,7 +18,7 @@ const AboutPage = () => {
                             Helping Students Excel in IELTS
                         </h1>
                         <p className="text-lg text-slate-600 dark:text-slate-300">
-                            We're dedicated to providing high-quality practice materials that simulate the real IELTS experience,
+                            We&apos;re dedicated to providing high-quality practice materials that simulate the real IELTS experience,
                             helping you build skills and confidence for exam day.
                         </p>
                     </div>

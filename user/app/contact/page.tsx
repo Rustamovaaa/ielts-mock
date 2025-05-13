@@ -20,7 +20,7 @@ const ContactPage = () => {
             </h1>
             <p className="text-lg text-slate-600 dark:text-slate-300">
               Have questions about our IELTS mock tests or need assistance? 
-              We're here to help you on your IELTS journey.
+              We&apos;re here to help you on your IELTS journey.
             </p>
           </div>
         </div>

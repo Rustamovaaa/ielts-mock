@@ -106,7 +106,7 @@ const FAQPage = () => {
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>Practice reading a variety of English texts (academic articles, newspapers, magazines)</li>
             <li>Improve your skimming and scanning techniques to locate information quickly</li>
-            <li>Learn to identify main ideas, supporting details, and author's opinions</li>
+            <li>Learn to identify main ideas, supporting details, and author&apos;s opinions</li>
             <li>Practice all question types (multiple choice, matching headings, true/false/not given, etc.)</li>
             <li>Time yourself to ensure you can complete all questions within 60 minutes</li>
             <li>Analyze your mistakes to understand your weaknesses</li>
@@ -166,7 +166,7 @@ const FAQPage = () => {
       question: "Do you offer feedback on Writing and Speaking sections?",
       answer: (
         <p>
-          Currently, our platform specializes in Reading and Listening practice tests only. We've chosen to focus on these sections to provide the highest quality practice experience possible. For Writing and Speaking practice, we recommend working with a qualified IELTS tutor who can provide personalized feedback on your performance.
+          Currently, our platform specializes in Reading and Listening practice tests only. We&apos;ve chosen to focus on these sections to provide the highest quality practice experience possible. For Writing and Speaking practice, we recommend working with a qualified IELTS tutor who can provide personalized feedback on your performance.
         </p>
       ),
     },
@@ -212,7 +212,7 @@ const FAQPage = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">Still Have Questions?</h2>
             <p className="text-slate-600 dark:text-slate-300 mb-8">
-              If you couldn't find the answer you were looking for, feel free to reach out to us directly.
+              If you couldn&apos;t find the answer you were looking for, feel free to reach out to us directly.
             </p>
             <a
               href="/contact"
