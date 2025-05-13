@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const AboutPage = () => {
     return (
@@ -200,12 +201,12 @@ const AboutPage = () => {
                             Start practicing with our free IELTS mock tests today and take the first step toward achieving your target score.
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
-                            <a href="/reading" className="bg-white text-purple-600 hover:bg-purple-50 px-6 py-3 rounded-xl font-medium transition-colors">
+                            <Link href="/reading" className="bg-white text-purple-600 hover:bg-purple-50 px-6 py-3 rounded-xl font-medium transition-colors">
                                 Try Reading Test
-                            </a>
-                            <a href="/listening" className="bg-transparent border border-white text-white hover:bg-white/10 px-6 py-3 rounded-xl font-medium transition-colors">
+                            </Link>
+                            <Link href="/listening" className="bg-transparent border border-white text-white hover:bg-white/10 px-6 py-3 rounded-xl font-medium transition-colors">
                                 Try Listening Test
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
