@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ielts-mock.iml" filepath="$PROJECT_DIR$/.idea/ielts-mock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cd-mock.iml" filepath="$PROJECT_DIR$/.idea/cd-mock.iml" />
     </modules>
   </component>
 </project>

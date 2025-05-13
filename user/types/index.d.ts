@@ -1,0 +1,26 @@
+type PassageType = "reading" | "listening";
+type QuestionType = 'matching' | 'multiple_choice' | 'fill_summary' | 'fill_note';
+
+interface Passage {
+    _id: string;
+    type: PassageType;
+    questions: string[];
+    passage_image?: string;
+    title?: string;
+    description?: string;
+    content?: string;
+    audioUrl?: string;
+}
+
+interface Question {
+    _id: string;
+    passage: string;
+    type: QuestionType;
+    question: string;
+    title?: string;
+    image?: string;
+    order?: number;
+    options?: { text: string; isCorrect: boolean }[];
+    pairs?: { left: string; right: string }[];
+    correctAnswer?: string;
+}
