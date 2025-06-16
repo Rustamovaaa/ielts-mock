@@ -119,74 +119,54 @@ const AboutPage = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-
-            {/* Team Section */}
+            </section>            {/* Team Section */}
             <section className="py-16 bg-white dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto text-center mb-12">
                         <h2 className="text-3xl font-bold mb-4">Our Team</h2>
                         <p className="text-slate-600 dark:text-slate-300">
-                            Our platform is created by IELTS experts and educators with years of experience
+                            Our platform is created by skilled Web developers, IELTS experts, and educators with years of experience
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {/* Team Member 1 */}
-                        <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 text-center">
-                            <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-slate-200 dark:border-slate-700">
-                                <Image 
-                                    src="/team-1.jpg" 
-                                    alt="Team Member" 
-                                    width={96} 
-                                    height={96}
-                                    className="object-cover w-full h-full"
-                                    unoptimized
-                                />
+                    <div className="flex justify-center">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl">
+                            {/* Team Member 1 */}
+                            <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 text-center">
+                                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-slate-200 dark:border-slate-700">
+                                    <Image 
+                                        src="/avatar-n.jpg" 
+                                        alt="Team Member" 
+                                        width={96} 
+                                        height={96}
+                                        className="object-cover w-full h-full"
+                                        unoptimized
+                                    />
+                                </div>
+                                <h3 className="text-xl font-semibold mb-1">Nurkhon Rustamova</h3>
+                                <p className="text-blue-600 dark:text-blue-400 mb-3">Front-end developer</p>
+                                <p className="text-slate-600 dark:text-slate-300 text-sm">
+                                    IELTS certificate holder and front-end developer
+                                </p>
                             </div>
-                            <h3 className="text-xl font-semibold mb-1">Sarah Johnson</h3>
-                            <p className="text-blue-600 dark:text-blue-400 mb-3">IELTS Examiner</p>
-                            <p className="text-slate-600 dark:text-slate-300 text-sm">
-                                Former IELTS examiner with over 15 years of experience in language assessment
-                            </p>
-                        </div>
 
-                        {/* Team Member 2 */}
-                        <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 text-center">
-                            <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-slate-200 dark:border-slate-700">
-                                <Image 
-                                    src="/team-2.jpg" 
-                                    alt="Team Member" 
-                                    width={96} 
-                                    height={96}
-                                    className="object-cover w-full h-full"
-                                    unoptimized
-                                />
+                            {/* Team Member 2 */}
+                            <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 text-center">                                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-slate-200 dark:border-slate-700">
+                                    <Image 
+                                        src="/avatarka-r.jpg" 
+                                        alt="Team Member" 
+                                        width={96} 
+                                        height={96}
+                                        className="object-cover w-full h-full"
+                                        unoptimized
+                                    />
+                                </div>
+                                <h3 className="text-xl font-semibold mb-1">Rakhimakhon Yuldasheva</h3>
+                                <p className="text-purple-600 dark:text-purple-400 mb-3">IELTS Instructor with 8 band score</p>
+                                <p className="text-slate-600 dark:text-slate-300 text-sm">
+                                    Experienced IELTS instructor who is passionate about teaching and supporting students
+                                </p>
                             </div>
-                            <h3 className="text-xl font-semibold mb-1">David Chen</h3>
-                            <p className="text-purple-600 dark:text-purple-400 mb-3">Content Developer</p>
-                            <p className="text-slate-600 dark:text-slate-300 text-sm">
-                                Specializes in creating authentic IELTS practice materials that mirror the real exam
-                            </p>
-                        </div>
-
-                        {/* Team Member 3 */}
-                        <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 text-center">
-                            <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-slate-200 dark:border-slate-700">
-                                <Image 
-                                    src="/team-3.jpg" 
-                                    alt="Team Member" 
-                                    width={96} 
-                                    height={96}
-                                    className="object-cover w-full h-full"
-                                    unoptimized
-                                />
-                            </div>
-                            <h3 className="text-xl font-semibold mb-1">Maria Gonzalez</h3>
-                            <p className="text-indigo-600 dark:text-indigo-400 mb-3">Education Specialist</p>
-                            <p className="text-slate-600 dark:text-slate-300 text-sm">
-                                Expert in language acquisition and educational technology with a focus on assessment
-                            </p>
                         </div>
                     </div>
                 </div>

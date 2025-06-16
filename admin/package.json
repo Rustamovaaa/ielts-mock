@@ -21,6 +21,7 @@
     "@tanstack/react-table": "^8.21.3",
     "@types/jsonwebtoken": "^9.0.9",
     "@uiw/react-md-editor": "^4.0.6",
+    "@uploadthing/react": "^7.3.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "jsonwebtoken": "^9.0.2",
@@ -32,6 +33,7 @@
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.56.1",
     "tailwind-merge": "^3.2.0",
+    "uploadthing": "^7.7.2",
     "zod": "^3.24.3"
   },
   "devDependencies": {

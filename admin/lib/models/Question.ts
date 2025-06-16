@@ -7,7 +7,7 @@ export interface IQuestion extends Document {
   title?: string;
   question: string;
   type: QuestionType;
-  image?: string;
+  imageUrl?: string;
   order?: number;
   // New fields for answers/options
   options?: { text: string; isCorrect: boolean }[];
@@ -22,7 +22,7 @@ const QuestionSchema = new Schema<IQuestion>({
   title: { type: String },
   question: { type: String, required: true },
   type: { type: String, enum: ['matching', 'multiple_choice', 'fill_summary', 'fill_note'], required: true },
-  image: { type: String },
+  imageUrl: { type: String },
   order: { type: Number },
   options: [{ text: String, isCorrect: Boolean }],
   pairs: [{ left: String, right: String }],

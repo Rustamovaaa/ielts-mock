@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46241a9d-4f66-485a-a8c5-c24b1f8ea2bd" name="Changes" comment="add: initial project setup with Next.js, Tailwind CSS, and essential components" />
+    <list default="true" id="46241a9d-4f66-485a-a8c5-c24b1f8ea2bd" name="Changes" comment="add: initial project setup with Next.js, Tailwind CSS, and essential components">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/api/auth/[...nextauth]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/api/question/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/api/question/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/lib/authOptions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/admin/lib/authOptions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/app/reading/[readingId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/user/app/reading/[readingId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/app/reading/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/user/app/reading/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/components/ui/passage-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/user/components/ui/passage-card.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +30,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Rustamovaaa/ielts-mock.git&quot;,
-    &quot;accountId&quot;: &quot;b2d51400-f176-4002-8a07-73cfec6b4027&quot;
+    &quot;accountId&quot;: &quot;32c9389c-7548-4a07-8085-c0cea6f96e16&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -33,24 +41,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/jahon/WebstormProjects/ielts-mock/admin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jahon/WebstormProjects/ielts-mock/admin&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Folders\\Projects\\ielts-mock\\admin\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -76,6 +85,7 @@
       </set>
     </attachedChunks>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="46241a9d-4f66-485a-a8c5-c24b1f8ea2bd" name="Changes" comment="" />
@@ -86,6 +96,14 @@
       <workItem from="1747144339079" duration="3108000" />
       <workItem from="1747225609981" duration="16000" />
       <workItem from="1747230505674" duration="26000" />
+      <workItem from="1747399351036" duration="957000" />
+      <workItem from="1747477183175" duration="92000" />
+      <workItem from="1747478226871" duration="660000" />
+      <workItem from="1747638011231" duration="194000" />
+      <workItem from="1748007710966" duration="99000" />
+      <workItem from="1748012455144" duration="16000" />
+      <workItem from="1748013559484" duration="4000" />
+      <workItem from="1748074135218" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="initialize Next.js project with essential components and configurations">
       <option name="closed" value="true" />

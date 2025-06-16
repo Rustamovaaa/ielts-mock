@@ -16,7 +16,7 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async signIn({ user }: { user: any }) {
       // Faqat admin email uchun ruxsat (o'zgartiring yoki olib tashlang)
-      if (user.email !== "jahongirsolijoniy@gmail.com") return false;
+      if (user.email !== "jahongirsolijoniy@gmail.com" && user.email !== "missnur4339@gmail.com") return false;
       return true;
     },
   },

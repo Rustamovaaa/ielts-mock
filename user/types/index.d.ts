@@ -5,7 +5,8 @@ interface Passage {
     _id: string;
     type: PassageType;
     questions: string[];
-    passage_image?: string;
+    imageUrl?: string;
+    videoUrl?: string;
     title?: string;
     description?: string;
     content?: string;
@@ -18,7 +19,7 @@ interface Question {
     type: QuestionType;
     question: string;
     title?: string;
-    image?: string;
+    imageUrl?: string;
     order?: number;
     options?: { text: string; isCorrect: boolean }[];
     pairs?: { left: string; right: string }[];

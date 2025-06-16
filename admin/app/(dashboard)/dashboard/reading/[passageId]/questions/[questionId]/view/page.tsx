@@ -2,30 +2,21 @@ import React from "react";
 import { notFound } from "next/navigation";
 
 async function getQuestion(questionId: string) {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL || ""}/api/question/${questionId}`,
-    { cache: "no-store" }
-  );
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || ''}/api/question/${questionId}`, { cache: 'no-store' });
   if (!res.ok) return null;
   return res.json();
 }
 
-export default async function QuestionView({
-  params,
-}: {
-  params: { passageId: string; questionId: string };
-}) {
-  const { passageId, questionId } = params;
+export default async function QuestionViewPage({ params }: { params: { passageId: string, questionId: string } }) {
+  const { questionId } = params;
   const question = await getQuestion(questionId);
   if (!question) return notFound();
   return (
     <div className="p-8 max-w-2xl mx-auto">
-      <h1 className="text-2xl font-bold mb-2">
-        {question.title || "Question"}
-      </h1>
+      <h1 className="text-2xl font-bold mb-2">{question.title || 'Question'}</h1>
       <div className="mb-2 text-gray-500">Type: {question.type}</div>
       <div className="mb-4">{question.question}</div>
-      {/* Answers/Options display */}
+      {/* Show options/answers for all types */}
       {question.type === "multiple_choice" && question.options && (
         <div className="mb-4">
           <div className="font-semibold mb-1">Options:</div>

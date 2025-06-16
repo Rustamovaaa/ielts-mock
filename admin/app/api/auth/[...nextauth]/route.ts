@@ -15,7 +15,8 @@ const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     async signIn({ user }: { user: any }) {
-      if (user.email !== "jahongirsolijoniy@gmail.com") return false;
+      const allowed = ["jahongirsolijoniy@gmail.com", "missnur4339@gmail.com"];
+      if (!allowed.includes(user.email)) return false;
       return true;
     },
   },

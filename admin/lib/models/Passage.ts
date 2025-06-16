@@ -3,7 +3,8 @@ import mongoose, { Schema, Document } from 'mongoose';
 export type PassageType = 'reading' | 'listening';
 
 export interface IPassage extends Document {
-  passage_image?: string;
+  imageUrl?: string;
+  videoUrl?: string;
   title?: string;
   description?: string;
   type: PassageType;
@@ -15,7 +16,8 @@ export interface IPassage extends Document {
 }
 
 const PassageSchema = new Schema<IPassage>({
-  passage_image: { type: String },
+  imageUrl: { type: String },
+  videoUrl: { type: String },
   title: { type: String },
   description: { type: String },
   type: { type: String, enum: ['reading', 'listening'], required: true },
