@@ -5,22 +5,21 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Loader2, Trash2 } from "lucide-react";
 
-export default function DeleteQuestionPage({ params }: { params: { id: string } } | { params: Promise<{ id: string }> }) {
+interface DeleteQuestionPageProps {
+  params: Promise<{ id: string }>;
+}
+
+export default function DeleteQuestionPage({ params }: DeleteQuestionPageProps) {
   const [questionId, setQuestionId] = useState<string | null>(null);
   const [isDeleting, setIsDeleting] = useState(false);
   const [question, setQuestion] = useState<any>(null);
   const router = useRouter();
-
   React.useEffect(() => {
     (async () => {
-      let qid = params as any;
-      if (typeof qid.then === "function") {
-        qid = await qid;
-      }
-      setQuestionId(qid.id);
+      const resolvedParams = await params;      setQuestionId(resolvedParams.id);
       
       // Fetch question details
-      const res = await fetch(`/api/question/${qid.id}`);
+      const res = await fetch(`/api/question/${resolvedParams.id}`);
       if (res.ok) {
         const data = await res.json();
         setQuestion(data);

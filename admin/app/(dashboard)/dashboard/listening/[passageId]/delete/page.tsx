@@ -5,18 +5,18 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Loader2, Trash2 } from "lucide-react";
 
-export default function DeleteListeningPage({ params }: { params: { passageId: string } } | { params: Promise<{ passageId: string }> }) {
+interface DeleteListeningPageProps {
+  params: Promise<{ passageId: string }>;
+}
+
+export default function DeleteListeningPage({ params }: DeleteListeningPageProps) {
   const [passageId, setPassageId] = useState<string | null>(null);
   const [isDeleting, setIsDeleting] = useState(false);
   const router = useRouter();
-
   React.useEffect(() => {
     (async () => {
-      let pid = params as any;
-      if (typeof pid.then === "function") {
-        pid = await pid;
-      }
-      setPassageId(pid.passageId);
+      const resolvedParams = await params;
+      setPassageId(resolvedParams.passageId);
     })();
   }, [params]);
 

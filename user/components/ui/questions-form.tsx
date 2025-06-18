@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 interface QuestionsFormProps {
   questions: Question[];
@@ -99,10 +100,9 @@ const QuestionsForm: React.FC<QuestionsFormProps> = ({ questions }) => {  const 
           {q.title && (
             <h4 className="text-lg font-medium mb-2 text-gray-800">{q.title}</h4>
           )}
-            {/* Question Image */}
-          {q.imageUrl && (
+            {/* Question Image */}          {q.imageUrl && (
             <div>
-              <img src={q.imageUrl} alt="question" className="mb-4 max-h-48 rounded shadow" />
+              <Image src={q.imageUrl} alt="question" className="mb-4 max-h-48 rounded shadow" width={500} height={192} />
               <p className="text-xs text-gray-500 mb-2">Image URL: {q.imageUrl}</p>
             </div>
           )}

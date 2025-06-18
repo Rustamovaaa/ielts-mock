@@ -11,14 +11,16 @@ import { Loader2 } from "lucide-react";
 
 type QuestionFormValues = z.infer<typeof questionSchema>;
 
-export default function QuestionEditPage({ params }: { params: { passageId: string, questionId: string } } | { params: Promise<{ passageId: string, questionId: string }> }) {
+interface QuestionEditPageProps {
+  params: Promise<{ passageId: string, questionId: string }>;
+}
+
+export default function QuestionEditPage({ params }: QuestionEditPageProps) {
   const [ids, setIds] = useState<{ passageId: string, questionId: string } | null>(null);
-  const router = useRouter();
-  useEffect(() => {
+  const router = useRouter();  useEffect(() => {
     (async () => {
-      let p = params as any;
-      if (typeof p.then === "function") p = await p;
-      setIds({ passageId: p.passageId, questionId: p.questionId });
+      const resolvedParams = await params;
+      setIds({ passageId: resolvedParams.passageId, questionId: resolvedParams.questionId });
     })();
   }, [params]);
 

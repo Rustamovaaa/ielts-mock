@@ -28,18 +28,18 @@ const questionSchema = z.object({
 
 type QuestionFormValues = z.infer<typeof questionSchema>;
 
-export default function QuestionEditPage({ params }: { params: { id: string } } | { params: Promise<{ id: string }> }) {
+interface QuestionEditPageProps {
+  params: Promise<{ id: string }>;
+}
+
+export default function QuestionEditPage({ params }: QuestionEditPageProps) {
   const [questionId, setQuestionId] = useState<string | null>(null);
   const [question, setQuestion] = useState<any>(null);
   const router = useRouter();
-
   React.useEffect(() => {
     (async () => {
-      let qid = params as any;
-      if (typeof qid.then === "function") {
-        qid = await qid;
-      }
-      setQuestionId(qid.id);
+      const resolvedParams = await params;
+      setQuestionId(resolvedParams.id);
     })();
   }, [params]);
 

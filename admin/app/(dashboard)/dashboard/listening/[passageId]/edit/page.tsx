@@ -13,16 +13,17 @@ import { Loader2 } from "lucide-react";
 const MDEditor = dynamic(() => import("@uiw/react-md-editor"), { ssr: false });
 type PassageFormValues = z.infer<typeof passageSchema>;
 
-export default function ListeningEditPage({ params }: { params: { passageId: string } } | { params: Promise<{ passageId: string }> }) {
+interface ListeningEditPageProps {
+  params: Promise<{ passageId: string }>;
+}
+
+export default function ListeningEditPage({ params }: ListeningEditPageProps) {
   // Next.js migration: params may be a Promise in future
   const [passageId, setPassageId] = React.useState<string | null>(null);
   React.useEffect(() => {
     (async () => {
-      let pid = params as any;
-      if (typeof pid.then === "function") {
-        pid = await pid;
-      }
-      setPassageId(pid.passageId);
+      const resolvedParams = await params;
+      setPassageId(resolvedParams.passageId);
     })();
   }, [params]);
 

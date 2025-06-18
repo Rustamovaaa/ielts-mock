@@ -3,18 +3,19 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
-export default function QuestionDeletePage({ params }: { params: { passageId: string, questionId: string } } | { params: Promise<{ passageId: string, questionId: string }> }) {
+interface QuestionDeletePageProps {
+  params: Promise<{ passageId: string, questionId: string }>;
+}
+
+export default function QuestionDeletePage({ params }: QuestionDeletePageProps) {
   const [ids, setIds] = useState<{ passageId: string, questionId: string } | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [question, setQuestion] = useState<any>(null);
-  const router = useRouter();
-  useEffect(() => {
-    (async () => {
-      let p = params as any;
-      if (typeof p.then === "function") p = await p;
-      setIds({ passageId: p.passageId, questionId: p.questionId });
-      const res = await fetch(`/api/question/${p.questionId}`);
+  const router = useRouter();  useEffect(() => {
+    (async () => {      const resolvedParams = await params;
+      setIds({ passageId: resolvedParams.passageId, questionId: resolvedParams.questionId });
+      const res = await fetch(`/api/question/${resolvedParams.questionId}`);
       if (res.ok) {
         setQuestion(await res.json());
       }
