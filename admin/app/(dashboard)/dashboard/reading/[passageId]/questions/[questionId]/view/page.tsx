@@ -7,8 +7,8 @@ async function getQuestion(questionId: string) {
   return res.json();
 }
 
-export default async function QuestionViewPage({ params }: { params: { passageId: string, questionId: string } }) {
-  const { questionId } = params;
+export default async function QuestionViewPage({ params }: RouteParams) {
+  const { questionId } = await params;
   const question = await getQuestion(questionId);
   if (!question) return notFound();
   return (

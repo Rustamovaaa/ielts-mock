@@ -6,20 +6,17 @@ async function getPassage(passageId: string) {
     `${process.env.NEXT_PUBLIC_BASE_URL || ""}/api/passage/${passageId}`,
     { cache: "no-store" }
   );
-  if (!res.ok) return null;
-  return res.json();
+  if (!res.ok) return null;  return res.json();
+}
+
+interface ListeningViewPageProps {
+  params: Promise<{ passageId: string }>;
 }
 
 export default async function ListeningViewPage({
   params,
-}: {
-  params: { passageId: string } | Promise<{ passageId: string }>;
-}) {
-  let passageId: string;
-  if (typeof (params as any).then === "function") {
-    params = await params;
-  }
-  passageId = (params as { passageId: string }).passageId;
+}: ListeningViewPageProps) {
+  const { passageId } = await params;
   const passage = await getPassage(passageId);
   if (!passage || passage.type !== 'listening') return notFound();
   

@@ -4,12 +4,9 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 
-interface CreateQuestionPageProps {
-  searchParams: { passage?: string };
-}
 
-const CreateQuestionPage = ({ searchParams }: CreateQuestionPageProps) => {
-  const { passage: passageId } = searchParams;
+const CreateQuestionPage = async ({ searchParams }: RouteParams) => {
+  const { passageId } = await searchParams;
   
   if (!passageId) {
     return (

@@ -12,10 +12,8 @@ async function getQuestion(questionId: string) {
 
 export default async function QuestionView({
   params,
-}: {
-  params: { passageId: string; questionId: string };
-}) {
-  const { passageId, questionId } = params;
+}: RouteParams) {
+  const { passageId, questionId } = await params;
   const question = await getQuestion(questionId);
   if (!question) return notFound();
   return (
