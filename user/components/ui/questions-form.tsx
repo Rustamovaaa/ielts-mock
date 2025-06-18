@@ -99,10 +99,12 @@ const QuestionsForm: React.FC<QuestionsFormProps> = ({ questions }) => {  const 
           {q.title && (
             <h4 className="text-lg font-medium mb-2 text-gray-800">{q.title}</h4>
           )}
-          
-          {/* Question Image */}
+            {/* Question Image */}
           {q.imageUrl && (
-            <img src={q.imageUrl} alt="question" className="mb-4 max-h-48 rounded" />
+            <div>
+              <img src={q.imageUrl} alt="question" className="mb-4 max-h-48 rounded shadow" />
+              <p className="text-xs text-gray-500 mb-2">Image URL: {q.imageUrl}</p>
+            </div>
           )}
           
           {/* Question Text */}

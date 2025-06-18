@@ -14,18 +14,6 @@ export default function Home() {
       <div>
           <Hero />
           <div className="mb-4">
-            <Plyr
-              source={{
-                type: 'video',
-                sources: [
-                  {
-                    src: "https://www.youtube.com/watch?v=https://www.youtube.com/watch?v=uIByr0xpWvc&list=RDuIByr0xpWvc&start_radio=1",
-                    provider: 'youtube'
-                  }
-                ]
-              }}
-            // style={{ borderRadius: '12px', overflow: 'hidden' }} 
-            />
         </div>
           <Footer />
       </div>

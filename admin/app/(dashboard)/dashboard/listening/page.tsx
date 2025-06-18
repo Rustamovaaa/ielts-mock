@@ -64,13 +64,28 @@ const Listen = async () => {
                         {p.type}
                       </span>
                     </TableCell>
-                    <TableCell>{p.description || <span className="italic text-gray-400">No description</span>}</TableCell>
-                    <TableCell className="text-center">
-                      <Button asChild size="icon" variant="ghost">
-                        <Link href={`/dashboard/listening/${p._id}/edit`}><Pencil className="h-4 w-4" /></Link>
+                    <TableCell>{p.description || <span className="italic text-gray-400">No description</span>}</TableCell>                    <TableCell className="flex gap-2 justify-center">
+                      <Button asChild size="sm" variant="secondary" className="group border-green-200 dark:border-green-800 hover:bg-green-200 dark:hover:bg-green-800/40">
+                        <Link href={`/dashboard/listening/${p._id}/view`} className="flex items-center gap-1">
+                          <span>View</span>
+                        </Link>
                       </Button>
-                      <Button asChild size="icon" variant="ghost">
-                        <Link href={`/dashboard/listening/${p._id}/delete`}><Trash2 className="h-4 w-4" /></Link>
+                      <Button asChild size="sm" variant="outline" className="group border-green-200 dark:border-green-800 hover:bg-green-100 dark:hover:bg-green-900/40">
+                        <Link href={`/dashboard/listening/${p._id}/edit`} className="flex items-center gap-1">
+                          <Pencil className="h-4 w-4 group-hover:text-green-700 transition-colors" />
+                          <span>Edit</span>
+                        </Link>
+                      </Button>
+                      <Button asChild size="sm" variant="destructive" className="group hover:bg-red-100 dark:hover:bg-red-900/40">
+                        <Link href={`/dashboard/listening/${p._id}/delete`} className="flex items-center gap-1">
+                          <Trash2 className="h-4 w-4 group-hover:text-red-700 transition-colors" />
+                          <span>Delete</span>
+                        </Link>
+                      </Button>
+                      <Button asChild size="sm" variant="secondary" className="group border-green-200 dark:border-green-800 hover:bg-green-200 dark:hover:bg-green-800/40">
+                        <Link href={`/dashboard/listening/${p._id}/questions`} className="flex items-center gap-1">
+                          <span>Questions</span>
+                        </Link>
                       </Button>
                     </TableCell>
                   </TableRow>

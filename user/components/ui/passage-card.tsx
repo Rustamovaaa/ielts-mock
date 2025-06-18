@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 
 
-const PassageCard = (passage: Passage) => {
-  const { _id, title, content } = passage;
+const PassageCard = (passage: Passage & { linkPrefix?: string }) => {
+  const { _id, title, content, linkPrefix = "/reading" } = passage;
   return (
-    <Link href={`/reading/${_id}`} className="block group">
+    <Link href={`${linkPrefix}/${_id}`} className="block group">
       <div className="relative bg-gradient-to-br from-blue-50 via-white to-purple-100 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 flex flex-col gap-2 border border-gray-200 overflow-hidden">
         {/* Decorative background shapes */}
         <div className="absolute -top-8 -left-8 w-32 h-32 bg-purple-200 opacity-30 rounded-full blur-2xl z-0 group-hover:scale-110 transition-transform duration-300" />
