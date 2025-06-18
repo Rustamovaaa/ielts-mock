@@ -5,11 +5,7 @@ import QuestionsForm from "@/components/ui/questions-form";
 import PassageVideoPlayer from '@/components/ui/PassageVideoPlayer';
 import Image from 'next/image';
 
-interface ReadingViewPageProps {
-  params: { readingId: string };
-}
-
-const ReadingViewPage = async ({ params }: ReadingViewPageProps) => {
+const ReadingViewPage = async ({ params }: RouteParams) => {
   const { readingId } = await params;
 
   const passage = await getPassageWithQuestions(readingId);

@@ -1,3 +1,8 @@
+interface RouteParams {
+    params: Promise<Record<string, string>>;
+    searchParams: Promise<Record<string, string>>;
+}
+
 type PassageType = "reading" | "listening";
 type QuestionType = 'matching' | 'multiple_choice' | 'fill_summary' | 'fill_note';
 

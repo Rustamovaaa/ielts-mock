@@ -5,11 +5,7 @@ import QuestionsForm from "@/components/ui/questions-form";
 import PassageVideoPlayer from '@/components/ui/PassageVideoPlayer';
 import Image from 'next/image';
 
-interface ListeningViewPageProps {
-  params: { listeningId: string };
-}
-
-const ListeningViewPage = async ({ params }: ListeningViewPageProps) => {
+const ListeningViewPage = async ({ params }: RouteParams) => {
   const { listeningId } = await params;
 
   const passage = await getPassageWithQuestions(listeningId);
@@ -46,10 +42,17 @@ const ListeningViewPage = async ({ params }: ListeningViewPageProps) => {
           </div>
         )}
         
-        {/* Image */}        {passage.imageUrl && (
+        {/* Image */}
+        {passage.imageUrl && (
           <div className="mb-4">
             <h3 className="text-lg font-semibold mb-2 text-gray-700">Reference Image</h3>
-            <Image src={passage.imageUrl} alt="Listening test image" className="mb-4 max-h-60 rounded shadow" width={600} height={240} />
+            <Image
+              src={passage.imageUrl}
+              alt="Listening test image"
+              className="mb-4 max-h-60 rounded shadow"
+              width={600}
+              height={240}
+            />
           </div>
         )}
         
