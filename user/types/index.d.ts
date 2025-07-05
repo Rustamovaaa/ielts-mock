@@ -25,6 +25,7 @@ interface Question {
     question: string;
     title?: string;
     imageUrl?: string;
+    videoUrl?: string;
     order?: number;
     options?: { text: string; isCorrect: boolean }[];
     pairs?: { left: string; right: string }[];

@@ -1,9 +1,9 @@
-import { getPassageWithQuestions } from '@/lib/actions/passage-detail.action';
 import { notFound } from 'next/navigation';
 import React from 'react';
 import QuestionsForm from "@/components/ui/questions-form";
 import PassageVideoPlayer from '@/components/ui/PassageVideoPlayer';
 import Image from 'next/image';
+import { getPassageWithQuestions } from '@/lib/actions/passage-detail.action';
 
 const ReadingViewPage = async ({ params }: RouteParams) => {
   const { readingId } = await params;

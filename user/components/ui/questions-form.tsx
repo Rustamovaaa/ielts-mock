@@ -106,7 +106,13 @@ const QuestionsForm: React.FC<QuestionsFormProps> = ({ questions }) => {  const 
               <p className="text-xs text-gray-500 mb-2">Image URL: {q.imageUrl}</p>
             </div>
           )}
-          
+          {/* Question Video */}
+          {q.videoUrl && (
+            <div className="mb-4">
+              <video src={q.videoUrl} controls className="w-full max-h-60 rounded-xl mb-2" />
+              <p className="text-xs text-gray-500">Video URL: {q.videoUrl}</p>
+            </div>
+          )}
           {/* Question Text */}
           <div className="mb-4 text-gray-700 whitespace-pre-line">
             {q.question}
