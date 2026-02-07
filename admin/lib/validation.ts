@@ -16,6 +16,7 @@ export const questionSchema = z.object({
   question: z.string(),
   type: z.enum(['matching', 'multiple_choice', 'fill_summary', 'fill_note']),
   imageUrl: z.string().optional(),
+  videoUrl: z.string().optional(),
   order: z.number().optional(),
   options: z.array(z.object({ text: z.string(), isCorrect: z.boolean() })).optional(),
   pairs: z.array(z.object({ left: z.string(), right: z.string() })).optional(),

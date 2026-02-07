@@ -100,7 +100,8 @@ const QuestionsForm: React.FC<QuestionsFormProps> = ({ questions }) => {  const 
           {q.title && (
             <h4 className="text-lg font-medium mb-2 text-gray-800">{q.title}</h4>
           )}
-            {/* Question Image */}          {q.imageUrl && (
+            {/* Question Image */}          
+            {q.imageUrl && (
             <div>
               <Image src={q.imageUrl} alt="question" className="mb-4 max-h-48 rounded shadow" width={500} height={192} />
               <p className="text-xs text-gray-500 mb-2">Image URL: {q.imageUrl}</p>
@@ -116,7 +117,8 @@ const QuestionsForm: React.FC<QuestionsFormProps> = ({ questions }) => {  const 
           {/* Question Text */}
           <div className="mb-4 text-gray-700 whitespace-pre-line">
             {q.question}
-          </div>          {/* Multiple Choice Questions */}
+          </div>        
+          {/* Multiple Choice Questions */}
           {q.type === 'multiple_choice' && q.options && (
             <div className="space-y-3">
               {(() => {
@@ -208,7 +210,8 @@ const QuestionsForm: React.FC<QuestionsFormProps> = ({ questions }) => {  const 
                   </>
                 );
               })()}
-              {submitted && (                <div className="mt-3 p-3 bg-gray-50 rounded">
+              {submitted && (                
+                <div className="mt-3 p-3 bg-gray-50 rounded">
                   <div className="text-sm text-gray-600 mb-2">
                     <strong>Correct answer{q.options.filter(opt => opt.isCorrect).length > 1 ? 's' : ''}:</strong>
                   </div>
@@ -218,7 +221,8 @@ const QuestionsForm: React.FC<QuestionsFormProps> = ({ questions }) => {  const 
                         ✓ {option.text}
                       </div>
                     ))}
-                  </div>                  <div className="mt-2 text-sm">
+                  </div>                 
+                   <div className="mt-2 text-sm">
                     <span className="text-gray-600">Your score for this question: </span>
                     <span className={`font-semibold ${results[`${q._id}_choice`] ? 'text-green-600' : 'text-red-600'}`}>
                       {results[`${q._id}_choice`] ? 'Correct' : 'Incorrect'}
@@ -242,7 +246,8 @@ const QuestionsForm: React.FC<QuestionsFormProps> = ({ questions }) => {  const 
                     <div className="flex-1 bg-gray-50 p-3 rounded font-medium">
                       {pair.left}
                     </div>
-                    <span className="text-gray-400">→</span>                    <input
+                    <span className="text-gray-400">→</span>                    
+                    <input
                       type="text"
                       className="flex-1 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                       placeholder="Your answer"
@@ -279,7 +284,8 @@ const QuestionsForm: React.FC<QuestionsFormProps> = ({ questions }) => {  const 
               {q.pairs.map((pair, pairIdx) => {
                 const key = `${q._id}_fill_${pairIdx}`;
                 return (
-                  <div key={pairIdx}>                    <input
+                  <div key={pairIdx}>
+                      <input
                       type="text"
                       className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 text-base w-full"
                       placeholder={`Answer ${pairIdx + 1}`}
@@ -327,7 +333,7 @@ const QuestionsForm: React.FC<QuestionsFormProps> = ({ questions }) => {  const 
       {questions.length > 0 && (
         <button
           type="submit"
-          className="bg-blue-600 text-white rounded font-bold hover:bg-blue-700 transition text-lg px-6 py-3 w-full"
+          className="bg-blue-500 text-white rounded font-bold hover:bg-purple-600 transition text-sm px-3 py-3"
           disabled={submitted}
         >
           {submitted ? 'Submitted' : 'Submit All Answers'}

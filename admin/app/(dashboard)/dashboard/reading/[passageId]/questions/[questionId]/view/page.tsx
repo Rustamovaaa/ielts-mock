@@ -16,6 +16,26 @@ export default async function QuestionViewPage({ params }: RouteParams) {
       <h1 className="text-2xl font-bold mb-2">{question.title || 'Question'}</h1>
       <div className="mb-2 text-gray-500">Type: {question.type}</div>
       <div className="mb-4">{question.question}</div>
+      {question.imageUrl && (
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold mb-2">Image</h3>
+          <img
+            src={question.imageUrl}
+            alt="Question image"
+            className="mb-4 rounded-xl max-h-40 w-full object-cover"
+          />
+        </div>
+      )}
+      {question.videoUrl && (
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold mb-2">Video</h3>
+          <video
+            src={question.videoUrl}
+            controls
+            className="mb-4 w-full max-h-60 rounded-xl"
+          />
+        </div>
+      )}
       {/* Show options/answers for all types */}
       {question.type === "multiple_choice" && question.options && (
         <div className="mb-4">

@@ -57,7 +57,7 @@ export default async function ListeningQuestionsPage({
           asChild
           className="h-11 px-6 text-base font-semibold bg-gradient-to-r from-green-600 to-blue-700 hover:from-green-700 hover:to-blue-800 shadow-md"
         >
-          <Link href={`/dashboard/question/create?passage=${passageId}`}>
+          <Link href={`/dashboard/question/create?passageId=${passageId}`}>
             <Plus className="mr-2 h-5 w-5" /> Add Question
           </Link>
         </Button>

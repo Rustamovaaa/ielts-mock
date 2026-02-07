@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46241a9d-4f66-485a-a8c5-c24b1f8ea2bd" name="Changes" comment="add: initial project setup with Next.js, Tailwind CSS, and essential components" />
+    <list default="true" id="46241a9d-4f66-485a-a8c5-c24b1f8ea2bd" name="Changes" comment="add: initial project setup with Next.js, Tailwind CSS, and essential components">
+      <change beforePath="$PROJECT_DIR$/admin/app/(dashboard)/dashboard/listening/[passageId]/questions/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/(dashboard)/dashboard/listening/[passageId]/questions/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/(dashboard)/dashboard/listening/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/(dashboard)/dashboard/listening/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/(dashboard)/dashboard/reading/[passageId]/questions/[questionId]/view/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/(dashboard)/dashboard/reading/[passageId]/questions/[questionId]/view/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/api/passage/[id]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/api/passage/[id]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/lib/models/Question.ts" beforeDir="false" afterPath="$PROJECT_DIR$/admin/lib/models/Question.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/lib/validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/admin/lib/validation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/app/reading/[readingId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/user/app/reading/[readingId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/app/reading/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/user/app/reading/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/components/ui/questions-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/user/components/ui/questions-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/lib/actions/pessage.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/user/lib/actions/pessage.action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/user/types/index.d.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,6 +109,7 @@
       <workItem from="1748013559484" duration="4000" />
       <workItem from="1748074135218" duration="8000" />
       <workItem from="1750087414819" duration="427000" />
+      <workItem from="1750677433827" duration="53000" />
     </task>
     <task id="LOCAL-00001" summary="initialize Next.js project with essential components and configurations">
       <option name="closed" value="true" />

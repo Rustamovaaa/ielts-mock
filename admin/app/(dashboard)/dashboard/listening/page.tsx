@@ -64,7 +64,8 @@ const Listen = async () => {
                         {p.type}
                       </span>
                     </TableCell>
-                    <TableCell>{p.description || <span className="italic text-gray-400">No description</span>}</TableCell>                    <TableCell className="flex gap-2 justify-center">
+                    <TableCell>{p.description || <span className="italic text-gray-400">No description</span>}</TableCell>
+                    <TableCell className="flex gap-2 justify-center">
                       <Button asChild size="sm" variant="secondary" className="group border-green-200 dark:border-green-800 hover:bg-green-200 dark:hover:bg-green-800/40">
                         <Link href={`/dashboard/listening/${p._id}/view`} className="flex items-center gap-1">
                           <span>View</span>

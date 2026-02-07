@@ -1,5 +1,5 @@
 import PassageCard from "@/components/ui/passage-card";
-import { getPassages } from '@/lib/actions/pessage.action';
+import { getPassages } from '@/lib/actions/passage.action';
 import React from 'react';
 
 const ReadingPage = async () => {

@@ -9,7 +9,6 @@ export interface IQuestion extends Document {
   type: QuestionType;
   imageUrl?: string;
   order?: number;
-  // New fields for answers/options
   options?: { text: string; isCorrect: boolean }[];
   pairs?: { left: string; right: string }[];
   correctAnswer?: string;

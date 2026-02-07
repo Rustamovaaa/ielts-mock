@@ -3,7 +3,7 @@ import Passage from '@/lib/models/Passage';
 import { passageSchema } from '@/lib/validation';
 import { connectToDatabase } from '@/lib/mongodb';
 
-export async function GET(_req: Request, { params }: RouteParams) {
+export async function GET(req: Request, { params }: RouteParams) {
   const { id } = await params;
   await connectToDatabase();
   const passage = await Passage.findById(id).populate('questions');
